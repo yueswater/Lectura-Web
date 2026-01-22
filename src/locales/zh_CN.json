@@ -1,0 +1,279 @@
+{
+  "common": {
+    "or": "或",
+    "loading": "加载中...",
+    "error": "发生错误，请稍后再试。",
+    "submit": "提交",
+    "cancel": "取消",
+    "close": "关闭",
+    "theme": "主题",
+    "search_placeholder": "搜索中...",
+    "all": "全部",
+    "see_all": "查看全部",
+    "recent": "最近",
+    "recent_created": "最近创建",
+    "created": "创建于",
+    "no_files": "目前没有可用的文件",
+    "download": {
+      "download": "下载",
+      "project_downloading": "打包项目...",
+      "handout_downloading": "讲义下载中..."
+    }
+  },
+  "auth": {
+    "welcome": "欢迎回来",
+    "create_account": "创建账号",
+    "username": "用户名",
+    "password": "密码",
+    "placeholders": {
+      "username": "请输入用户名",
+      "password": "请输入密码"
+    },
+    "remember_me": "记住我",
+    "sign_in": "登录",
+    "no_account": "还没有账号？",
+    "forgot_password": "忘记密码？",
+    "sign_up": "注册",
+    "enter_username": "输入账号",
+    "enter_password": "输入密码",
+    "first_name": "名字",
+    "last_name": "姓氏",
+    "email": "电子邮件",
+    "already_have_account": "已经有账号了？",
+    "check_email": "请查收电子邮件",
+    "verification_sent_to": "验证邮件已发送至",
+    "verify_success": "您的邮箱已成功验证。",
+    "verify_success_msg": "您可以关闭此页面并返回登录。",
+    "back_to_login": "返回登录页面"
+  },
+  "config": {
+    "title": "讲义配置",
+    "theme": "主题颜色",
+    "font": "字体风格",
+    "author": "作者",
+    "institution": "机构",
+    "date": "日期",
+    "save": "保存设置",
+    "cancel": "取消"
+  },
+  "storage": {
+    "tier": {
+      "beta": "测试版",
+      "free": "免费版",
+      "pro": "专业版",
+      "enterprise": "企业版"
+    },
+    "upgrade_to_pro": "升级到专业版",
+    "storage_used": "已用存储空间",
+    "storage_limit": "存储空间上限",
+    "used": "已使用",
+    "limit_reached_title": "存储空间已满",
+    "limit_reached_message": "您已达到当前账号的存储空间上限。"
+  },
+  "hero": {
+    "title": "释放教学的",
+    "subtitle": "力量",
+    "description": "通过我们的自动化 SaaS 仪表板，将您的课程数据转化为可操作的见解和精美的讲义。",
+    "get_started": "立即开始"
+  },
+  "nav": {
+    "dashboard": "控制台",
+    "handouts": "讲义",
+    "settings": "设置",
+    "sign_in": "登录",
+    "sign_out": "退出登录",
+    "get_started": "立即开始",
+    "feature": "功能",
+    "pricing": "定价",
+    "about": "关于我们",
+    "faq": "常见问题"
+  },
+  "footer": {
+    "about_us": "关于我们",
+    "contact": "联系我们",
+    "privacy_policy": "隐私政策",
+    "terms_of_service": "服务条款",
+    "copyright": "版权所有 © {{year}} - Lectura Ltd 保留所有权利"
+  },
+  "profile_sidebar": {
+    "profile": "个人资料",
+    "dashboard": "控制台",
+    "settings": "设置",
+    "sign_out": "退出登录"
+  },
+  "dashboard": {
+    "title": "仪表板",
+    "welcome_back": "欢迎回来",
+    "recent_handouts": "最近讲义",
+    "recent_files": "最近文件",
+    "stats": {
+      "title": "统计数据",
+      "total_handouts": "总讲义数",
+      "total_projects": "总项目数",
+      "total_sections": "总章节数",
+      "total_users": "总用户数"
+    }
+  },
+  "dashboard_sidebar": {
+    "dashboard": "控制台",
+    "projects": "项目",
+    "handouts": "讲义",
+    "settings": "设置",
+    "logout": "退出登录"
+  },
+  "projects": {
+    "title": "项目",
+    "subtitle": "管理并跟踪项目",
+    "create_new": "创建新项目",
+    "create": "创建项目",
+    "cancel": "取消",
+    "no_projects": "尚无项目，请点击上方按钮创建新项目。",
+    "no_description": "暂无描述",
+    "search_placeholder": "搜索项目...",
+    "project_name": "项目名称",
+    "project_name_example": "例如：2024 年度报告",
+    "description": "描述（选填）",
+    "description_placeholder": "简单介绍一下你的项目吧！",
+    "tags": "标签",
+    "add_tag": "添加标签"
+  },
+  "handouts": {
+    "title": "讲义",
+    "subtitle": "管理您的讲义数据",
+    "create_new": "创建新讲义",
+    "no_handouts": "暂无讲义，立即创建您的第一个讲义吧！",
+    "no_description": "暂无描述",
+    "empty": "还没有任何讲义",
+    "no_section": "尚无章节，快来添加第一个章节吧。",
+    "search_placeholder": "搜索讲义...",
+    "table_of_contents": "目录",
+    "add_section": "添加章节",
+    "configure_handout": "配置讲义",
+    "select_project": "选择项目",
+    "handout_title": "讲义标题",
+    "handout_description": "讲义描述（选填）",
+    "handout_description_placeholder": "描述一下讲义的内容...",
+    "create_handout": "创建讲义",
+    "cancel_create": "取消",
+    "save_changes": "保存更改",
+    "order_saved": "已保存",
+    "export_pdf": "导出 PDF",
+    "edit_config": "讲义配置",
+    "section": "个章节",
+    "sections": "个章节",
+    "sections_in_total": "共 {{count}} 個章节",
+    "config": {
+      "title": "讲义配置",
+      "basic_info": "基本信息",
+      "global_style": "全局样式",
+      "author": "作者",
+      "institute": "机构",
+      "date": "日期",
+      "document_lang": "讲义语言",
+      "base_theme": "默认主题",
+      "base_font": "默认字体",
+      "paragraph_indent": "段落缩进",
+      "page_numbering_pos": "页码位置",
+      "cancel": "取消",
+      "apply": "应用设置",
+      "reset": "恢复默认值",
+      "typography_override": "排版覆盖",
+      "enable_custom": "自定义样式",
+      "indent_options": {
+        "no_indent": "不缩进",
+        "indent_all": "全部缩进",
+        "indent_except_first_paragraph": "首段不缩进"
+      },
+      "page_number_position": {
+        "label": "页码位置",
+        "top": "顶部",
+        "top_left": "左上角",
+        "top_center": "正上方",
+        "top_right": "右上角",
+        "bottom": "底部",
+        "bottom_left": "左下角",
+        "bottom_center": "正下方",
+        "bottom_right": "右下角"
+      },
+      "font_styles": {
+        "sans": "无衬线体",
+        "serif": "衬线体",
+        "mono": "等宽字体",
+        "modern_sans": "现代黑体",
+        "classic_serif": "经典宋体"
+      },
+      "languages": {
+        "english": "英文",
+        "traditional_chinese": "繁体中文",
+        "simplified_chinese": "简体中文",
+        "thai": "泰文"
+      },
+      "themes": {
+        "nordic_dark": "北欧深色",
+        "modern_blue": "现代蓝",
+        "academic": "学术风"
+      }
+    }
+  },
+  "handout_table": {
+    "title": "讲义名称",
+    "description": "描述",
+    "status": "状态",
+    "last_updated": "最后更新",
+    "actions": "操作"
+  },
+  "section": {
+    "title": "添加章节",
+    "add_new_section": "新增章节",
+    "section_title": "章节标题",
+    "parent_section": "父级章节（选填）",
+    "empty": "留空则设为顶层章节",
+    "example": "例如：第一章 示例章节",
+    "no_parent": "无父级章节",
+    "cancel": "取消",
+    "edit": {
+      "editing": "编辑中",
+      "save": "保存",
+      "markdown_source": "Markdown 工具",
+      "preview": "实时预览",
+      "placeholder": "在此输入您的章节内容..."
+    }
+  },
+  "section_table": {
+    "move": "移动",
+    "section_structure": "章节结构",
+    "type": "层级",
+    "last_updated": "最后更新",
+    "actions": "操作",
+    "confirm_delete": "您确定要删除此章节吗？"
+  },
+  "calendar": {
+    "title": "日历",
+    "handouts": "份讲义",
+    "less": "少",
+    "more": "多",
+    "days": {
+      "mon": "一",
+      "tue": "二",
+      "wed": "三",
+      "thu": "四",
+      "fri": "五",
+      "sat": "六",
+      "sun": "日"
+    },
+    "months": {
+      "0": "一月",
+      "1": "二月",
+      "2": "三月",
+      "3": "四月",
+      "4": "五月",
+      "5": "六月",
+      "6": "七月",
+      "7": "八月",
+      "8": "九月",
+      "9": "十月",
+      "10": "十一月",
+      "11": "十二月"
+    }
+  }
+}

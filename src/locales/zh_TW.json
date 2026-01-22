@@ -1,0 +1,340 @@
+{
+  "common": {
+    "or": "或",
+    "loading": "載入中...",
+    "error": "發生錯誤，請稍後再試。",
+    "submit": "提交",
+    "cancel": "取消",
+    "close": "關閉",
+    "theme": "主題",
+    "search_placeholder": "搜尋中...",
+    "all": "全部",
+    "see_all": "查看全部",
+    "recent": "最近",
+    "recent_created": "最近建立",
+    "created": "建立於",
+    "no_files": "目前沒有可用的檔案",
+    "download": {
+      "download": "下載",
+      "project_downloading": "打包專案中...",
+      "handout_downloading": "講義下載中..."
+    },
+    "back_to_home": "返回首頁",
+    "redirecting": "正在重新導向..."
+  },
+  "auth": {
+    "welcome": "歡迎回來",
+    "create_account": "建立帳號",
+    "username": "使用者名稱",
+    "password": "密碼",
+    "placeholders": {
+      "username": "輸入使用者名稱",
+      "password": "輸入密碼"
+    },
+    "remember_me": "記住我",
+    "sign_in": "登入",
+    "no_account": "還沒有帳號？",
+    "forgot_password": "忘記密碼？",
+    "sign_up": "註冊",
+    "enter_username": "輸入帳號",
+    "enter_password": "輸入密碼",
+    "first_name": "名",
+    "last_name": "姓",
+    "email": "電子郵件",
+    "already_have_account": "已經有帳號了？",
+    "check_email": "檢查您的電子郵件",
+    "verification_sent_to": "驗證郵件已發送至",
+    "verify_success": "您的電子郵件已成功驗證。",
+    "verify_success_msg": "您可以關閉此頁面並返回登入。",
+    "back_to_login": "返回登入頁面",
+    "reset": {
+      "forgot_password": "忘記密碼",
+      "forgot_desc": "請輸入您的電子郵件地址，我們將發送重設驗證碼與連結給您。",
+      "send_request": "發送重設請求",
+      "request_sent_title": "郵件已寄出",
+      "request_sent_content": "請前往您的電子郵件信箱查看驗證碼與重設連結。",
+      "set_new_password": "設置新密碼",
+      "confirm_button": "確認修改密碼",
+      "success_title": "密碼修改成功",
+      "success_content": "您的密碼已更新，請使用新密碼重新登入。",
+      "error_title": "發生錯誤",
+      "request_error": "無法發送重設請求，請稍後再試。",
+      "confirm_error": "驗證碼錯誤或連結已失效。"
+    },
+    "verify": {
+      "verifying": "正在驗證您的電子郵件...",
+      "success_title": "驗證成功",
+      "success_msg": "您的電子郵件已成功驗證。",
+      "fail_title": "驗證失敗",
+      "fail_msg": "驗證連結無效或已過期。請重新嘗試。",
+      "resend_link": "重新發送驗證郵件",
+      "try_again": "重新嘗試驗證",
+      "already_verified_title": "您的電子郵件已驗證，請返回登入。",
+      "already_verified_msg": "返回登入頁面"
+    }
+  },
+  "config": {
+    "title": "講義配置",
+    "theme": "主題顏色",
+    "font": "字體風格",
+    "author": "作者",
+    "institution": "機構",
+    "date": "日期",
+    "save": "儲存設定",
+    "cancel": "取消"
+  },
+  "storage": {
+    "tier": {
+      "beta": "測試版",
+      "free": "免費",
+      "pro": "專業版",
+      "enterprise": "企業版"
+    },
+    "upgrade_to_pro": "升級到專業版",
+    "storage_used": "已使用儲存空間",
+    "storage_limit": "儲存空間上限",
+    "used": "已使用",
+    "limit_reached_title": "儲存空間已達上限",
+    "limit_reached_message": "您已達到目前帳號的儲存空間上限。"
+  },
+  "hero": {
+    "title": "釋放教學的",
+    "subtitle": "力量",
+    "description": "透過我們的自動化SaaS儀表板，將您的課程數據轉化為可操作的見解和美觀的講義。",
+    "get_started": "開始使用"
+  },
+  "nav": {
+    "dashboard": "儀表板",
+    "handouts": "講義",
+    "settings": "設定",
+    "sign_in": "登入",
+    "sign_out": "登出",
+    "get_started": "開始使用",
+    "feature": "功能",
+    "pricing": "價格",
+    "about": "關於我們",
+    "faq": "常見問題"
+  },
+  "footer": {
+    "about_us": "關於我們",
+    "contact": "聯絡我們",
+    "privacy_policy": "隱私政策",
+    "terms_of_service": "服務條款",
+    "copyright": "版權所有 © {{year}} - Lectura Ltd 保留所有權利"
+  },
+  "profile": {
+    "tabs": {
+      "account": "帳戶資訊",
+      "security": "安全設定"
+    },
+    "account": {
+      "title": "帳號",
+      "full_name": "全名",
+      "username": "使用者名稱",
+      "email": "電子郵件",
+      "tier": "會員等級"
+    },
+    "security": {
+      "title": "安全性",
+      "error_title": "無法更新密碼",
+      "error_message": "更新密碼時發生錯誤，請稍後再試。",
+      "same_password_error": "新密碼不能與舊密碼相同。",
+      "current_password": "目前密碼",
+      "new_password": "新密碼",
+      "confirm_new_password": "確認新密碼",
+      "placeholders": {
+        "current_password": "輸入目前密碼",
+        "new_password": "輸入新密碼",
+        "confirm_new_password": "再次輸入新密碼"
+      },
+      "success_title": "密碼更新成功",
+      "success_message": "您的密碼已成功更新。",
+      "update": "更新密碼"
+    },
+    "profile_info": "個人資料資訊",
+    "profile_info_description": "更新您的個人資料資訊。",
+    "active": "已啟用",
+    "inactive": "未啟用"
+  },
+  "profile_sidebar": {
+    "profile": "個人資料",
+    "dashboard": "儀表板",
+    "settings": "設定",
+    "sign_out": "登出"
+  },
+  "dashboard": {
+    "title": "儀表板",
+    "welcome_back": "歡迎回來",
+    "recent_handouts": "最近講義",
+    "recent_files": "最近檔案",
+    "stats": {
+      "title": "統計資料",
+      "total_handouts": "總講義數",
+      "total_projects": "總專案數",
+      "total_sections": "總章節數",
+      "total_users": "總使用者數"
+    }
+  },
+  "dashboard_sidebar": {
+    "dashboard": "儀表板",
+    "projects": "專案",
+    "handouts": "講義",
+    "settings": "設定",
+    "logout": "登出"
+  },
+  "projects": {
+    "title": "專案",
+    "subtitle": "管理並追蹤專案",
+    "create_new": "建立新專案",
+    "create": "建立專案",
+    "cancel": "取消建立",
+    "no_projects": "尚無專案，請點擊上方按鈕建立新專案。",
+    "no_description": "無描述",
+    "search_placeholder": "搜尋專案...",
+    "project_name": "專案名稱",
+    "project_name_example": "例如：2024 年度報告",
+    "description": "描述 (選填)",
+    "description_placeholder": "偷偷告訴我你的專案在做啥吧！",
+    "tags": "標籤",
+    "add_tag": "新增標籤"
+  },
+  "handouts": {
+    "title": "講義",
+    "subtitle": "管理您的講義資料",
+    "create_new": "建立新講義",
+    "no_handouts": "尚無講義，快來新建講義吧！",
+    "no_description": "無描述",
+    "empty": "講義空空如也",
+    "no_section": "尚無章節，快來新增章節吧。",
+    "search_placeholder": "搜尋講義...",
+    "table_of_contents": "目錄",
+    "add_section": "新增章節",
+    "configure_handout": "配置講義",
+    "select_project": "選擇專案",
+    "handout_title": "講義標題",
+    "handout_description": "講義描述 （選填）",
+    "handout_description_placeholder": "說說你的講義內容吧...",
+    "create_handout": "建立講義",
+    "cancel_create": "取消建立",
+    "save_changes": "儲存變更",
+    "order_saved": "已儲存",
+    "export_pdf": "匯出 PDF",
+    "edit_config": "講義配置",
+    "section": "個章節",
+    "sections": "個章節",
+    "sections_in_total": "{{count}} 個章節",
+    "config": {
+      "title": "講義配置",
+      "basic_info": "基本資訊",
+      "global_style": "全域樣式",
+      "author": "作者",
+      "institute": "機構",
+      "date": "日期",
+      "document_lang": "講義語言",
+      "base_theme": "預設主題",
+      "base_font": "預設字體",
+      "paragraph_indent": "段落縮排",
+      "page_numbering_pos": "頁碼位置",
+      "cancel": "取消",
+      "apply": "套用設定",
+      "reset": "恢復預設值",
+      "typography_override": "排版覆寫",
+      "enable_custom": "自訂樣式",
+      "indent_options": {
+        "no_indent": "不縮排",
+        "indent_all": "全部縮排",
+        "indent_except_first_paragraph": "首段不縮排"
+      },
+      "page_number_position": {
+        "label": "頁碼位置",
+        "top": "頂部",
+        "top_left": "左上角",
+        "top_center": "正上方",
+        "top_right": "右上角",
+        "bottom": "底部",
+        "bottom_left": "左下角",
+        "bottom_center": "正下方",
+        "bottom_right": "右下角"
+      },
+      "font_styles": {
+        "sans": "無襯線體",
+        "serif": "襯線體",
+        "mono": "等寬字體",
+        "modern_sans": "現代黑體",
+        "classic_serif": "經典明體"
+      },
+      "languages": {
+        "english": "英文",
+        "traditional_chinese": "繁體中文",
+        "simplified_chinese": "簡體中文",
+        "thai": "泰文"
+      },
+      "themes": {
+        "nordic_dark": "北歐深色",
+        "modern_blue": "現代藍",
+        "academic": "學術風"
+      }
+    }
+  },
+  "handout_table": {
+    "title": "講義名稱",
+    "description": "描述",
+    "status": "狀態",
+    "last_updated": "最後更新",
+    "actions": "操作"
+  },
+  "section": {
+    "title": "新增章節",
+    "add_new_section": "新增章節",
+    "section_title": "章節標題",
+    "parent_section": "上層章節 (選填)",
+    "empty": "留空則為頂層章節",
+    "example": "例如：第一章 範例章節",
+    "no_parent": "無上層章節",
+    "cancel": "取消",
+    "edit": {
+      "editing": "編輯中",
+      "save": "儲存",
+      "markdown_source": "Markdown 工具",
+      "preview": "即時預覽",
+      "placeholder": "在此撰寫您的章節內容..."
+    }
+  },
+  "section_table": {
+    "move": "移動",
+    "section_structure": "章節結構",
+    "type": "層級",
+    "last_updated": "最後更新",
+    "actions": "操作",
+    "confirm_delete": "您確定要刪除此章節嗎？"
+  },
+  "calendar": {
+    "title": "日曆",
+    "handouts": "份講義",
+    "less": "較少",
+    "more": "較多",
+    "days": {
+      "mon": "一",
+      "tue": "二",
+      "wed": "三",
+      "thu": "四",
+      "fri": "五",
+      "sat": "六",
+      "sun": "日"
+    },
+    "months": {
+      "0": "一月",
+      "1": "二月",
+      "2": "三月",
+      "3": "四月",
+      "4": "五月",
+      "5": "六月",
+      "6": "七月",
+      "7": "八月",
+      "8": "九月",
+      "9": "十月",
+      "10": "十一月",
+      "11": "十二月"
+    }
+  }
+}
