@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import authService from '@/services/authService';
 import ThemeController from './ThemeController';
 import LanguageSwitcher from './LanguageSwitcher';
+import { UserProfile } from '@/types';
 
 interface NavbarProps {
     onOpenSidebar: () => void;
@@ -14,6 +15,21 @@ const Navbar = ({ onOpenSidebar }: NavbarProps) => {
     const { t } = useTranslation();
     const isAuth = authService.isAuthenticated();
     const [currentTheme, setCurrentTheme] = useState(localStorage.getItem('theme') || 'light');
+    const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
+
+    useEffect(() => {
+        if (isAuth) {
+            const fetchUser = async () => {
+                try {
+                    const data = await authService.getCurrentUser();
+                    setUserProfile(data);
+                } catch (error) {
+                    console.error(error);
+                }
+            };
+            fetchUser();
+        }
+    }, [isAuth]);
 
     useEffect(() => {
         const observer = new MutationObserver(() => {
@@ -81,10 +97,18 @@ const Navbar = ({ onOpenSidebar }: NavbarProps) => {
                     {isAuth ? (
                         <button
                             onClick={onOpenSidebar}
-                            className="btn btn-ghost btn-circle avatar placeholder hover:bg-base-content/10 transition-colors"
+                            className="btn btn-ghost btn-circle avatar hover:bg-base-content/10 transition-colors"
                         >
-                            <div className="bg-neutral text-neutral-content rounded-full w-10 ring ring-base-content/5 ring-offset-2 ring-offset-base-100">
-                                <User size={20} />
+                            <div className="w-10 rounded-full ring ring-base-content/5 ring-offset-2 ring-offset-base-100 overflow-hidden bg-neutral text-neutral-content flex items-center justify-center">
+                                {userProfile?.avatar ? (
+                                    <img
+                                        src={userProfile.avatar}
+                                        alt={userProfile.username}
+                                        className="w-full h-full object-cover"
+                                    />
+                                ) : (
+                                    <User size={20} />
+                                )}
                             </div>
                         </button>
                     ) : (
