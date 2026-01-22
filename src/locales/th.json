@@ -2,8 +2,8 @@
   "common": {
     "or": "หรือ",
     "loading": "กำลังโหลด...",
-    "error": "เกิดข้อผิดพลาด โปรดลองอีกครั้งในภายหลัง",
-    "submit": "ส่ง",
+    "error": "เกิดข้อผิดพลาด กรุณาลองใหม่ในภายหลัง",
+    "submit": "ส่งข้อมูล",
     "cancel": "ยกเลิก",
     "close": "ปิด",
     "theme": "ธีม",
@@ -16,9 +16,11 @@
     "no_files": "ไม่มีไฟล์ที่พร้อมใช้งาน",
     "download": {
       "download": "ดาวน์โหลด",
-      "project_downloading": "กำลังจัดเตรียมโปรเจกต์...",
-      "handout_downloading": "กำลังดาวน์โหลดใบความรู้..."
-    }
+      "project_downloading": "กำลังรวมไฟล์โปรเจกต์...",
+      "handout_downloading": "กำลังดาวน์โหลดเอกสารประกอบการสอน..."
+    },
+    "back_to_home": "กลับสู่หน้าหลัก",
+    "redirecting": "กำลังเปลี่ยนเส้นทาง..."
   },
   "auth": {
     "welcome": "ยินดีต้อนรับกลับมา",
@@ -31,25 +33,50 @@
     },
     "remember_me": "จดจำฉัน",
     "sign_in": "เข้าสู่ระบบ",
-    "no_account": "ยังไม่มีบัญชีใช่ไหม?",
+    "no_account": "ยังไม่มีบัญชีใช่หรือไม่?",
     "forgot_password": "ลืมรหัสผ่าน?",
     "sign_up": "ลงทะเบียน",
-    "enter_username": "กรอกชื่อบัญชี",
+    "enter_username": "กรอกชื่อผู้ใช้",
     "enter_password": "กรอกรหัสผ่าน",
     "first_name": "ชื่อ",
     "last_name": "นามสกุล",
     "email": "อีเมล",
-    "already_have_account": "มีบัญชีอยู่แล้วใช่ไหม?",
+    "already_have_account": "มีบัญชีอยู่แล้วใช่หรือไม่?",
     "check_email": "ตรวจสอบอีเมลของคุณ",
-    "verification_sent_to": "ส่งลิงก์ยืนยันไปยัง",
+    "verification_sent_to": "ส่งอีเมลยืนยันไปยัง",
     "verify_success": "ยืนยันอีเมลสำเร็จ",
-    "verify_success_msg": "คุณสามารถปิดหน้านี้และกลับไปที่หน้าเข้าสู่ระบบได้",
-    "back_to_login": "กลับไปยังหน้าเข้าสู่ระบบ"
+    "verify_success_msg": "คุณสามารถปิดหน้านี้และกลับไปที่หน้าเข้าสู่ระบบ",
+    "back_to_login": "กลับไปที่หน้าเข้าสู่ระบบ",
+    "reset": {
+      "forgot_password": "ลืมรหัสผ่าน",
+      "forgot_desc": "กรุณากรอกอีเมลของคุณ เราจะส่งรหัสและลิงก์สำหรับรีเซ็ตรหัสผ่านให้",
+      "send_request": "ส่งคำขอรีเซ็ต",
+      "request_sent_title": "ส่งอีเมลเรียบร้อยแล้ว",
+      "request_sent_content": "กรุณาตรวจสอบกล่องขาเข้าในอีเมลของคุณเพื่อรับรหัสและลิงก์รีเซ็ต",
+      "set_new_password": "ตั้งรหัสผ่านใหม่",
+      "confirm_button": "ยืนยันการเปลี่ยนรหัสผ่าน",
+      "success_title": "เปลี่ยนรหัสผ่านสำเร็จ",
+      "success_content": "รหัสผ่านของคุณได้รับการอัปเดตแล้ว กรุณาเข้าสู่ระบบด้วยรหัสผ่านใหม่",
+      "error_title": "เกิดข้อผิดพลาด",
+      "request_error": "ไม่สามารถส่งคำขอรีเซ็ตได้ กรุณาลองใหม่ในภายหลัง",
+      "confirm_error": "รหัสยืนยันไม่ถูกต้องหรือลิงก์หมดอายุ"
+    },
+    "verify": {
+      "verifying": "กำลังยืนยันอีเมลของคุณ...",
+      "success_title": "ยืนยันสำเร็จ",
+      "success_msg": "อีเมลของคุณได้รับการยืนยันเรียบร้อยแล้ว",
+      "fail_title": "ยืนยันไม่สำเร็จ",
+      "fail_msg": "ลิงก์ยืนยันไม่ถูกต้องหรือหมดอายุ กรุณาลองใหม่อีกครั้ง",
+      "resend_link": "ส่งอีเมลยืนยันอีกครั้ง",
+      "try_again": "ลองยืนยันอีกครั้ง",
+      "already_verified_title": "อีเมลของคุณได้รับการยืนยันแล้ว กรุณากลับไปเข้าสู่ระบบ",
+      "already_verified_msg": "กลับไปที่หน้าเข้าสู่ระบบ"
+    }
   },
   "config": {
-    "title": "การกำหนดค่าใบความรู้",
+    "title": "การตั้งค่าเอกสาร",
     "theme": "สีธีม",
-    "font": "สไตล์ตัวอักษร",
+    "font": "รูปแบบฟอนต์",
     "author": "ผู้เขียน",
     "institution": "สถาบัน",
     "date": "วันที่",
@@ -64,26 +91,26 @@
       "enterprise": "องค์กร"
     },
     "upgrade_to_pro": "อัปเกรดเป็นรุ่นโปร",
-    "storage_used": "พื้นที่เก็บข้อมูลที่ใช้",
-    "storage_limit": "ขีดจำกัดพื้นที่เก็บข้อมูล",
+    "storage_used": "พื้นที่ที่ใช้ไป",
+    "storage_limit": "ขีดจำกัดพื้นที่จัดเก็บ",
     "used": "ใช้แล้ว",
-    "limit_reached_title": "พื้นที่เก็บข้อมูลเต็ม",
-    "limit_reached_message": "คุณใช้พื้นที่เก็บข้อมูลครบตามขีดจำกัดของบัญชีแล้ว"
+    "limit_reached_title": "พื้นที่จัดเก็บเต็มแล้ว",
+    "limit_reached_message": "คุณใช้พื้นที่จัดเก็บถึงขีดจำกัดสูงสุดของบัญชีแล้ว"
   },
   "hero": {
-    "title": "ปลดปล่อย",
-    "subtitle": "พลังแห่งการสอน",
-    "description": "เปลี่ยนข้อมูลหลักสูตรของคุณให้เป็นข้อมูลเชิงลึกและใบความรู้ที่สวยงามด้วยแดชบอร์ด SaaS อัตโนมัติของเรา",
+    "title": "ปลดปล่อยพลังแห่ง",
+    "subtitle": "การสอน",
+    "description": "เปลี่ยนข้อมูลหลักสูตรของคุณให้เป็นข้อมูลเชิงลึกที่นำไปใช้ได้จริงและเอกสารประกอบการสอนที่สวยงามด้วยแดชบอร์ด SaaS อัตโนมัติของเรา",
     "get_started": "เริ่มใช้งาน"
   },
   "nav": {
     "dashboard": "แดชบอร์ด",
-    "handouts": "ใบความรู้",
+    "handouts": "เอกสารประกอบ",
     "settings": "ตั้งค่า",
     "sign_in": "เข้าสู่ระบบ",
     "sign_out": "ออกจากระบบ",
-    "get_started": "เริ่มใช้งาน",
-    "feature": "ฟีเจอร์",
+    "get_started": "ลงทะเบียน",
+    "feature": "คุณสมบัติ",
     "pricing": "ราคา",
     "about": "เกี่ยวกับเรา",
     "faq": "คำถามที่พบบ่อย"
@@ -92,8 +119,42 @@
     "about_us": "เกี่ยวกับเรา",
     "contact": "ติดต่อเรา",
     "privacy_policy": "นโยบายความเป็นส่วนตัว",
-    "terms_of_service": "ข้อกำหนดการให้บริการ",
+    "terms_of_service": "เงื่อนไขการให้บริการ",
     "copyright": "ลิขสิทธิ์ © {{year}} - Lectura Ltd สงวนลิขสิทธิ์"
+  },
+  "profile": {
+    "tabs": {
+      "account": "ข้อมูลบัญชี",
+      "security": "การตั้งค่าความปลอดภัย"
+    },
+    "account": {
+      "title": "บัญชี",
+      "full_name": "ชื่อ-นามสกุล",
+      "username": "ชื่อผู้ใช้",
+      "email": "อีเมล",
+      "tier": "ระดับสมาชิก"
+    },
+    "security": {
+      "title": "ความปลอดภัย",
+      "error_title": "ไม่สามารถอัปเดตรหัสผ่านได้",
+      "error_message": "เกิดข้อผิดพลาดระหว่างการอัปเดตรหัสผ่าน กรุณาลองใหม่ในภายหลัง",
+      "same_password_error": "รหัสผ่านใหม่ต้องไม่ซ้ำกับรหัสผ่านเดิม",
+      "current_password": "รหัสผ่านปัจจุบัน",
+      "new_password": "รหัสผ่านใหม่",
+      "confirm_new_password": "ยืนยันรหัสผ่านใหม่",
+      "placeholders": {
+        "current_password": "กรอกรหัสผ่านปัจจุบัน",
+        "new_password": "กรอกรหัสผ่านใหม่",
+        "confirm_new_password": "กรอกรหัสผ่านใหม่อีกครั้ง"
+      },
+      "success_title": "อัปเดตรหัสผ่านสำเร็จ",
+      "success_message": "รหัสผ่านของคุณได้รับการอัปเดตเรียบร้อยแล้ว",
+      "update": "อัปเดตรหัสผ่าน"
+    },
+    "profile_info": "ข้อมูลโปรไฟล์",
+    "profile_info_description": "อัปเดตข้อมูลโปรไฟล์ส่วนตัวของคุณ",
+    "active": "ใช้งานอยู่",
+    "inactive": "ไม่ได้ใช้งาน"
   },
   "profile_sidebar": {
     "profile": "โปรไฟล์",
@@ -104,20 +165,20 @@
   "dashboard": {
     "title": "แดชบอร์ด",
     "welcome_back": "ยินดีต้อนรับกลับมา",
-    "recent_handouts": "ใบความรู้ล่าสุด",
+    "recent_handouts": "เอกสารล่าสุด",
     "recent_files": "ไฟล์ล่าสุด",
     "stats": {
       "title": "สถิติ",
-      "total_handouts": "ใบความรู้ทั้งหมด",
-      "total_projects": "โปรเจกต์ทั้งหมด",
-      "total_sections": "หัวข้อทั้งหมด",
-      "total_users": "ผู้ใช้งานทั้งหมด"
+      "total_handouts": "จำนวนเอกสารทั้งหมด",
+      "total_projects": "จำนวนโปรเจกต์ทั้งหมด",
+      "total_sections": "จำนวนหัวข้อทั้งหมด",
+      "total_users": "จำนวนผู้ใช้ทั้งหมด"
     }
   },
   "dashboard_sidebar": {
     "dashboard": "แดชบอร์ด",
     "projects": "โปรเจกต์",
-    "handouts": "ใบความรู้",
+    "handouts": "เอกสารประกอบ",
     "settings": "ตั้งค่า",
     "logout": "ออกจากระบบ"
   },
@@ -127,45 +188,45 @@
     "create_new": "สร้างโปรเจกต์ใหม่",
     "create": "สร้างโปรเจกต์",
     "cancel": "ยกเลิก",
-    "no_projects": "ยังไม่มีโปรเจกต์ คลิกปุ่มด้านบนเพื่อสร้างใหม่",
+    "no_projects": "ยังไม่มีโปรเจกต์ คลิกปุ่มด้านบนเพื่อสร้างโปรเจกต์ใหม่",
     "no_description": "ไม่มีคำอธิบาย",
     "search_placeholder": "ค้นหาโปรเจกต์...",
     "project_name": "ชื่อโปรเจกต์",
     "project_name_example": "เช่น รายงานประจำปี 2024",
     "description": "คำอธิบาย (ไม่บังคับ)",
-    "description_placeholder": "บอกเราหน่อยว่าโปรเจกต์ของคุณเกี่ยวกับอะไร...",
+    "description_placeholder": "บอกเราหน่อยว่าโปรเจกต์นี้เกี่ยวกับอะไร!",
     "tags": "แท็ก",
     "add_tag": "เพิ่มแท็ก"
   },
   "handouts": {
-    "title": "ใบความรู้",
-    "subtitle": "จัดการข้อมูลใบความรู้ของคุณ",
-    "create_new": "สร้างใบความรู้ใหม่",
-    "no_handouts": "ยังไม่มีใบความรู้ มาสร้างใบความรู้แรกกันเลย!",
+    "title": "เอกสารประกอบ",
+    "subtitle": "จัดการข้อมูลเอกสารของคุณ",
+    "create_new": "สร้างเอกสารใหม่",
+    "no_handouts": "ยังไม่มีเอกสาร มาเริ่มสร้างกันเลย!",
     "no_description": "ไม่มีคำอธิบาย",
-    "empty": "ไม่มีใบความรู้",
-    "no_section": "ยังไม่มีหัวข้อ เพิ่มหัวข้อเพื่อเริ่มใช้งาน",
-    "search_placeholder": "ค้นหาใบความรู้...",
+    "empty": "ไม่มีเอกสารที่ต้องการ",
+    "no_section": "ยังไม่มีหัวข้อ มาเริ่มเพิ่มหัวข้อกัน",
+    "search_placeholder": "ค้นหาเอกสาร...",
     "table_of_contents": "สารบัญ",
     "add_section": "เพิ่มหัวข้อ",
-    "configure_handout": "กำหนดค่าใบความรู้",
+    "configure_handout": "ตั้งค่าเอกสาร",
     "select_project": "เลือกโปรเจกต์",
-    "handout_title": "หัวข้อใบความรู้",
-    "handout_description": "คำอธิบายใบความรู้ (ไม่บังคับ)",
-    "handout_description_placeholder": "อธิบายเนื้อหาใบความรู้ของคุณ...",
-    "create_handout": "สร้างใบความรู้",
+    "handout_title": "หัวข้อเอกสาร",
+    "handout_description": "คำอธิบายเอกสาร (ไม่บังคับ)",
+    "handout_description_placeholder": "อธิบายเนื้อหาในเอกสารของคุณ...",
+    "create_handout": "สร้างเอกสาร",
     "cancel_create": "ยกเลิก",
     "save_changes": "บันทึกการเปลี่ยนแปลง",
-    "order_saved": "บันทึกแล้ว",
-    "export_pdf": "ส่งออกเป็น PDF",
-    "edit_config": "การกำหนดค่า",
+    "order_saved": "บันทึกเรียบร้อย",
+    "export_pdf": "ส่งออก PDF",
+    "edit_config": "การตั้งค่าเอกสาร",
     "section": "หัวข้อ",
     "sections": "หัวข้อ",
     "sections_in_total": "ทั้งหมด {{count}} หัวข้อ",
     "config": {
-      "title": "การกำหนดค่าใบความรู้",
+      "title": "การตั้งค่าเอกสาร",
       "basic_info": "ข้อมูลพื้นฐาน",
-      "global_style": "สไตล์ส่วนกลาง",
+      "global_style": "รูปแบบรวม",
       "author": "ผู้เขียน",
       "institute": "สถาบัน",
       "date": "วันที่",
@@ -177,12 +238,12 @@
       "cancel": "ยกเลิก",
       "apply": "นำการตั้งค่าไปใช้",
       "reset": "คืนค่าเริ่มต้น",
-      "typography_override": "เขียนทับการจัดพิมพ์",
-      "enable_custom": "ปรับแต่งสไตล์ด้วยตนเอง",
+      "typography_override": "เขียนทับรูปแบบการจัดพิมพ์",
+      "enable_custom": "สไตล์ที่กำหนดเอง",
       "indent_options": {
-        "no_indent": "ไม่ย่อหน้า",
+        "no_indent": "ไม่มีการย่อหน้า",
         "indent_all": "ย่อหน้าทั้งหมด",
-        "indent_except_first_paragraph": "ย่อหน้ายกเว้นย่อหน้าแรก"
+        "indent_except_first_paragraph": "ไม่ย่อหน้าในย่อหน้าแรก"
       },
       "page_number_position": {
         "label": "ตำแหน่งเลขหน้า",
@@ -196,11 +257,11 @@
         "bottom_right": "ล่างขวา"
       },
       "font_styles": {
-        "sans": "ไม่มีหัว (Sans Serif)",
+        "sans": "ไม่มีหัว (Sans-serif)",
         "serif": "มีหัว (Serif)",
-        "mono": "ตัวอักษรกว้างคงที่ (Monospace)",
-        "modern_sans": "Modern Sans",
-        "classic_serif": "Classic Serif"
+        "mono": "ตัวอักษรความกว้างคงที่",
+        "modern_sans": "โมเดิร์นแซนส์",
+        "classic_serif": "คลาสสิกเซริฟ"
       },
       "languages": {
         "english": "อังกฤษ",
@@ -209,47 +270,49 @@
         "thai": "ไทย"
       },
       "themes": {
-        "nordic_dark": "Nordic Dark",
-        "modern_blue": "Modern Blue",
-        "academic": "Academic"
+        "nordic_dark": "นอร์ดิกดาร์ก",
+        "modern_blue": "โมเดิร์นบลู",
+        "academic": "วิชาการ"
       }
     }
   },
   "handout_table": {
-    "title": "ชื่อใบความรู้",
+    "title": "ชื่อเอกสาร",
     "description": "คำอธิบาย",
     "status": "สถานะ",
-    "last_updated": "แก้ไขล่าสุด",
-    "actions": "การดำเนินการ"
+    "last_updated": "อัปเดตล่าสุด",
+    "actions": "การจัดการ"
   },
   "section": {
     "title": "เพิ่มหัวข้อ",
     "add_new_section": "เพิ่มหัวข้อใหม่",
     "section_title": "หัวข้อ",
     "parent_section": "หัวข้อหลัก (ไม่บังคับ)",
-    "empty": "เว้นว่างไว้หากเป็นหัวข้อระดับสูงสุด",
+    "empty": "ปล่อยว่างหากเป็นหัวข้อระดับสูงสุด",
     "example": "เช่น บทที่ 1: บทนำ",
     "no_parent": "ไม่มีหัวข้อหลัก",
     "cancel": "ยกเลิก",
     "edit": {
       "editing": "กำลังแก้ไข",
       "save": "บันทึก",
+      "saved": "บันทึกแล้ว",
       "markdown_source": "เครื่องมือ Markdown",
       "preview": "ตัวอย่างแบบเรียลไทม์",
-      "placeholder": "เขียนเนื้อหาหัวข้อของคุณที่นี่..."
+      "placeholder": "เขียนเนื้อหาของคุณที่นี่...",
+      "apply": "ตกลง"
     }
   },
   "section_table": {
     "move": "ย้าย",
     "section_structure": "โครงสร้างหัวข้อ",
     "type": "ระดับ",
-    "last_updated": "แก้ไขล่าสุด",
-    "actions": "การดำเนินการ",
+    "last_updated": "อัปเดตล่าสุด",
+    "actions": "การจัดการ",
     "confirm_delete": "คุณแน่ใจหรือไม่ว่าต้องการลบหัวข้อนี้?"
   },
   "calendar": {
     "title": "ปฏิทิน",
-    "handouts": "ใบความรู้",
+    "handouts": "เอกสาร",
     "less": "น้อย",
     "more": "มาก",
     "days": {

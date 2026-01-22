@@ -16,9 +16,11 @@
     "no_files": "目前没有可用的文件",
     "download": {
       "download": "下载",
-      "project_downloading": "打包项目...",
-      "handout_downloading": "讲义下载中..."
-    }
+      "project_downloading": "正在打包项目...",
+      "handout_downloading": "正在下载讲义..."
+    },
+    "back_to_home": "返回首页",
+    "redirecting": "正在重定向..."
   },
   "auth": {
     "welcome": "欢迎回来",
@@ -26,8 +28,8 @@
     "username": "用户名",
     "password": "密码",
     "placeholders": {
-      "username": "请输入用户名",
-      "password": "请输入密码"
+      "username": "输入用户名",
+      "password": "输入密码"
     },
     "remember_me": "记住我",
     "sign_in": "登录",
@@ -40,11 +42,36 @@
     "last_name": "姓氏",
     "email": "电子邮件",
     "already_have_account": "已经有账号了？",
-    "check_email": "请查收电子邮件",
+    "check_email": "检查您的电子邮件",
     "verification_sent_to": "验证邮件已发送至",
-    "verify_success": "您的邮箱已成功验证。",
+    "verify_success": "您的电子邮件已成功验证。",
     "verify_success_msg": "您可以关闭此页面并返回登录。",
-    "back_to_login": "返回登录页面"
+    "back_to_login": "返回登录页面",
+    "reset": {
+      "forgot_password": "忘记密码",
+      "forgot_desc": "请输入您的电子邮件地址，我们将向您发送重置验证码与链接。",
+      "send_request": "发送重置请求",
+      "request_sent_title": "邮件已寄出",
+      "request_sent_content": "请前往您的电子邮箱查看验证码与重置链接。",
+      "set_new_password": "设置新密码",
+      "confirm_button": "确认修改密码",
+      "success_title": "密码修改成功",
+      "success_content": "您的密码已更新，请使用新密码重新登录。",
+      "error_title": "发生错误",
+      "request_error": "无法发送重置请求，请稍后再试。",
+      "confirm_error": "验证码错误或链接已失效。"
+    },
+    "verify": {
+      "verifying": "正在验证您的电子邮件...",
+      "success_title": "验证成功",
+      "success_msg": "您的电子邮件已成功验证。",
+      "fail_title": "验证失败",
+      "fail_msg": "验证链接无效或已过期。请重新尝试。",
+      "resend_link": "重新发送验证邮件",
+      "try_again": "重新尝试验证",
+      "already_verified_title": "您的电子邮件已验证，请返回登录。",
+      "already_verified_msg": "返回登录页面"
+    }
   },
   "config": {
     "title": "讲义配置",
@@ -59,15 +86,15 @@
   "storage": {
     "tier": {
       "beta": "测试版",
-      "free": "免费版",
+      "free": "免费",
       "pro": "专业版",
       "enterprise": "企业版"
     },
     "upgrade_to_pro": "升级到专业版",
-    "storage_used": "已用存储空间",
+    "storage_used": "已使用存储空间",
     "storage_limit": "存储空间上限",
     "used": "已使用",
-    "limit_reached_title": "存储空间已满",
+    "limit_reached_title": "存储空间已达上限",
     "limit_reached_message": "您已达到当前账号的存储空间上限。"
   },
   "hero": {
@@ -77,14 +104,14 @@
     "get_started": "立即开始"
   },
   "nav": {
-    "dashboard": "控制台",
+    "dashboard": "仪表板",
     "handouts": "讲义",
     "settings": "设置",
     "sign_in": "登录",
-    "sign_out": "退出登录",
-    "get_started": "立即开始",
+    "sign_out": "登出",
+    "get_started": "注册",
     "feature": "功能",
-    "pricing": "定价",
+    "pricing": "价格",
     "about": "关于我们",
     "faq": "常见问题"
   },
@@ -95,11 +122,45 @@
     "terms_of_service": "服务条款",
     "copyright": "版权所有 © {{year}} - Lectura Ltd 保留所有权利"
   },
+  "profile": {
+    "tabs": {
+      "account": "账户信息",
+      "security": "安全设置"
+    },
+    "account": {
+      "title": "账号",
+      "full_name": "全名",
+      "username": "用户名",
+      "email": "电子邮件",
+      "tier": "会员等级"
+    },
+    "security": {
+      "title": "安全性",
+      "error_title": "无法更新密码",
+      "error_message": "更新密码时发生错误，请稍后再试。",
+      "same_password_error": "新密码不能与旧密码相同。",
+      "current_password": "当前密码",
+      "new_password": "新密码",
+      "confirm_new_password": "确认新密码",
+      "placeholders": {
+        "current_password": "输入当前密码",
+        "new_password": "输入新密码",
+        "confirm_new_password": "再次输入新密码"
+      },
+      "success_title": "密码更新成功",
+      "success_message": "您的密码已成功更新。",
+      "update": "更新密码"
+    },
+    "profile_info": "个人资料信息",
+    "profile_info_description": "更新您的个人资料信息。",
+    "active": "已启用",
+    "inactive": "未启用"
+  },
   "profile_sidebar": {
     "profile": "个人资料",
-    "dashboard": "控制台",
+    "dashboard": "仪表板",
     "settings": "设置",
-    "sign_out": "退出登录"
+    "sign_out": "登出"
   },
   "dashboard": {
     "title": "仪表板",
@@ -107,7 +168,7 @@
     "recent_handouts": "最近讲义",
     "recent_files": "最近文件",
     "stats": {
-      "title": "统计数据",
+      "title": "统计资料",
       "total_handouts": "总讲义数",
       "total_projects": "总项目数",
       "total_sections": "总章节数",
@@ -115,53 +176,53 @@
     }
   },
   "dashboard_sidebar": {
-    "dashboard": "控制台",
+    "dashboard": "仪表板",
     "projects": "项目",
     "handouts": "讲义",
     "settings": "设置",
-    "logout": "退出登录"
+    "logout": "登出"
   },
   "projects": {
     "title": "项目",
-    "subtitle": "管理并跟踪项目",
+    "subtitle": "管理并追踪项目",
     "create_new": "创建新项目",
     "create": "创建项目",
-    "cancel": "取消",
+    "cancel": "取消创建",
     "no_projects": "尚无项目，请点击上方按钮创建新项目。",
-    "no_description": "暂无描述",
+    "no_description": "无描述",
     "search_placeholder": "搜索项目...",
     "project_name": "项目名称",
     "project_name_example": "例如：2024 年度报告",
-    "description": "描述（选填）",
-    "description_placeholder": "简单介绍一下你的项目吧！",
+    "description": "描述 (选填)",
+    "description_placeholder": "偷偷告诉我你的项目在做啥吧！",
     "tags": "标签",
     "add_tag": "添加标签"
   },
   "handouts": {
     "title": "讲义",
-    "subtitle": "管理您的讲义数据",
+    "subtitle": "管理您的讲义资料",
     "create_new": "创建新讲义",
-    "no_handouts": "暂无讲义，立即创建您的第一个讲义吧！",
-    "no_description": "暂无描述",
-    "empty": "还没有任何讲义",
-    "no_section": "尚无章节，快来添加第一个章节吧。",
+    "no_handouts": "尚无讲义，快来新建讲义吧！",
+    "no_description": "无描述",
+    "empty": "讲义空空如也",
+    "no_section": "尚无章节，快来添加章节吧。",
     "search_placeholder": "搜索讲义...",
     "table_of_contents": "目录",
     "add_section": "添加章节",
     "configure_handout": "配置讲义",
     "select_project": "选择项目",
     "handout_title": "讲义标题",
-    "handout_description": "讲义描述（选填）",
-    "handout_description_placeholder": "描述一下讲义的内容...",
+    "handout_description": "讲义描述 (选填)",
+    "handout_description_placeholder": "说说你的讲义内容吧...",
     "create_handout": "创建讲义",
-    "cancel_create": "取消",
+    "cancel_create": "取消创建",
     "save_changes": "保存更改",
     "order_saved": "已保存",
     "export_pdf": "导出 PDF",
     "edit_config": "讲义配置",
     "section": "个章节",
     "sections": "个章节",
-    "sections_in_total": "共 {{count}} 個章节",
+    "sections_in_total": "共 {{count}} 个章节",
     "config": {
       "title": "讲义配置",
       "basic_info": "基本信息",
@@ -224,19 +285,21 @@
   },
   "section": {
     "title": "添加章节",
-    "add_new_section": "新增章节",
+    "add_new_section": "添加章节",
     "section_title": "章节标题",
-    "parent_section": "父级章节（选填）",
-    "empty": "留空则设为顶层章节",
+    "parent_section": "上层章节 (选填)",
+    "empty": "留空则为顶层章节",
     "example": "例如：第一章 示例章节",
-    "no_parent": "无父级章节",
+    "no_parent": "无上层章节",
     "cancel": "取消",
     "edit": {
       "editing": "编辑中",
       "save": "保存",
+      "saved": "已保存",
       "markdown_source": "Markdown 工具",
       "preview": "实时预览",
-      "placeholder": "在此输入您的章节内容..."
+      "placeholder": "在此撰写您的章节内容...",
+      "apply": "应用"
     }
   },
   "section_table": {
@@ -250,8 +313,8 @@
   "calendar": {
     "title": "日历",
     "handouts": "份讲义",
-    "less": "少",
-    "more": "多",
+    "less": "较少",
+    "more": "较多",
     "days": {
       "mon": "一",
       "tue": "二",
