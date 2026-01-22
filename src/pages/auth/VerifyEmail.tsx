@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import { useSearchParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { CheckCircle2, XCircle, Loader2, Info } from 'lucide-react';
 import authService from '@/services/authService';
@@ -8,25 +8,14 @@ import Navbar from '@/components/layout/Navbar';
 function VerifyEmail() {
     const { t } = useTranslation();
     const navigate = useNavigate();
-    const [searchParams] = useSearchParams();
+    const { token } = useParams<{ token: string }>();
 
-    /**
-     * Component states to track verification progress and UI feedback
-     */
     const [status, setStatus] = useState<'loading' | 'success' | 'error' | 'already_verified'>('loading');
     const [countdown, setCountdown] = useState(5);
 
-    /**
-     * useRef is used to prevent duplicate API calls in React Strict Mode (Development)
-     * which triggers useEffect twice.
-     */
     const verificationStarted = useRef(false);
-    const token = searchParams.get('token');
 
     useEffect(() => {
-        /**
-         * Guard clause: skip if no token is present or if a request is already in progress
-         */
         if (!token || verificationStarted.current) return;
 
         const verify = async () => {
@@ -34,19 +23,12 @@ function VerifyEmail() {
             try {
                 const response = await authService.verifyEmail(token);
 
-                /**
-                 * Backend returns 'already_verified' status if the user is already active
-                 * and the token record exists as 'used' in the database.
-                 */
                 if (response.data && response.data.status === 'already_verified') {
                     setStatus('already_verified');
                 } else {
                     setStatus('success');
                 }
             } catch (err) {
-                /**
-                 * Any 4xx or 5xx errors (Expired token, invalid signature) result in error state
-                 */
                 setStatus('error');
             }
         };
@@ -54,10 +36,6 @@ function VerifyEmail() {
         verify();
     }, [token]);
 
-    /**
-     * Countdown logic: triggered only when the user is already verified.
-     * Automatically redirects to home page after 5 seconds.
-     */
     useEffect(() => {
         let timer: NodeJS.Timeout;
         if (status === 'already_verified' && countdown > 0) {
@@ -76,7 +54,6 @@ function VerifyEmail() {
                 <div className="card w-full max-w-md bg-base-100 shadow-xl text-center">
                     <div className="card-body items-center py-12">
 
-                        {/* Loading State: Displayed during API request */}
                         {status === 'loading' && (
                             <>
                                 <Loader2 size={48} className="animate-spin text-neutral mb-6" />
@@ -84,7 +61,6 @@ function VerifyEmail() {
                             </>
                         )}
 
-                        {/* Already Verified State: Displays info icon and auto-redirect countdown */}
                         {status === 'already_verified' && (
                             <>
                                 <div className="w-20 h-20 bg-info/10 text-info rounded-full flex items-center justify-center mb-6">
@@ -98,7 +74,6 @@ function VerifyEmail() {
                             </>
                         )}
 
-                        {/* Success State: Displays checkmark and direct link to login */}
                         {status === 'success' && (
                             <>
                                 <div className="w-20 h-20 bg-success/10 text-success rounded-full flex items-center justify-center mb-6">
@@ -112,7 +87,6 @@ function VerifyEmail() {
                             </>
                         )}
 
-                        {/* Error State: Displays error icon and navigation options for retry */}
                         {status === 'error' && (
                             <>
                                 <div className="w-20 h-20 bg-error/10 text-error rounded-full flex items-center justify-center mb-6">
