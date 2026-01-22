@@ -109,7 +109,7 @@
     "settings": "設定",
     "sign_in": "登入",
     "sign_out": "登出",
-    "get_started": "開始使用",
+    "get_started": "註冊",
     "feature": "功能",
     "pricing": "價格",
     "about": "關於我們",
@@ -295,9 +295,11 @@
     "edit": {
       "editing": "編輯中",
       "save": "儲存",
+      "saved": "已儲存",
       "markdown_source": "Markdown 工具",
       "preview": "即時預覽",
-      "placeholder": "在此撰寫您的章節內容..."
+      "placeholder": "在此撰寫您的章節內容...",
+      "apply": "套用"
     }
   },
   "section_table": {
