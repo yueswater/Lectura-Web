@@ -30,7 +30,8 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/verify-email" element={<VerifyEmail />} />
+        {/* <Route path="/verify-email" element={<VerifyEmail />} /> */}
+        <Route path="/verify-email/:token" element={<VerifyEmail />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPasswordConfirm />} />
 
