@@ -3,25 +3,30 @@ import {
     Bold, Italic, List, ListOrdered, Quote, Code,
     Link as LinkIcon, Image as ImageIcon,
     Sigma, Table, Minus, ChevronDown,
-    AlignLeft, AlignCenter, AlignRight, Palette
+    AlignLeft, AlignCenter, AlignRight, Palette,
+    Info
 } from 'lucide-react';
+import ImageUploadModal from '../widgets/ImageUploadModal';
+import { useTranslation } from 'react-i18next';
 
 interface MarkdownToolbarProps {
     onAction: (prefix: string, suffix: string) => void;
 }
 
 const MarkdownToolbar = ({ onAction }: MarkdownToolbarProps) => {
+    const { t } = useTranslation();
     const [hoverGrid, setHoverGrid] = useState({ r: 0, c: 0 });
+    const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
 
     const colors = [
-        { name: 'Red', value: '#ef4444' },
-        { name: 'Orange', value: '#f97316' },
-        { name: 'Yellow', value: '#eab308' },
-        { name: 'Green', value: '#22c55e' },
-        { name: 'Blue', value: '#3b82f6' },
-        { name: 'Purple', value: '#a855f7' },
-        { name: 'Pink', value: '#ec4899' },
-        { name: 'Gray', value: '#64748b' },
+        { name: t('markdown_tools.color.red'), value: '#ef4444' },
+        { name: t('markdown_tools.color.orange'), value: '#f97316' },
+        { name: t('markdown_tools.color.yellow'), value: '#eab308' },
+        { name: t('markdown_tools.color.green'), value: '#22c55e' },
+        { name: t('markdown_tools.color.blue'), value: '#3b82f6' },
+        { name: t('markdown_tools.color.purple'), value: '#a855f7' },
+        { name: t('markdown_tools.color.pink'), value: '#ec4899' },
+        { name: t('markdown_tools.color.gray'), value: '#64748b' },
     ];
 
     const orderedListTypes = [
@@ -31,6 +36,14 @@ const MarkdownToolbar = ({ onAction }: MarkdownToolbarProps) => {
         { label: 'i. ii. iii.', prefix: 'i. ' },
         { label: 'I. II. III.', prefix: 'I. ' },
         { label: '甲. 乙. 丙.', prefix: '甲. ' },
+    ];
+
+    const calloutTypes = [
+        { label: t('markdown_tools.callout.info'), type: 'info', color: '#3b82f6' },
+        { label: t('markdown_tools.callout.warning'), type: 'warning', color: '#f59e0b' },
+        { label: t('markdown_tools.callout.danger'), type: 'danger', color: '#ef4444' },
+        { label: t('markdown_tools.callout.success'), type: 'success', color: '#10b981' },
+        { label: t('markdown_tools.callout.tip'), type: 'tip', color: '#8b5cf6' },
     ];
 
     const generateTable = (rows: number, cols: number, align: 'left' | 'center' | 'right') => {
@@ -46,24 +59,26 @@ const MarkdownToolbar = ({ onAction }: MarkdownToolbarProps) => {
         if (document.activeElement instanceof HTMLElement) (document.activeElement as HTMLElement).blur();
     };
 
-    const primaryTools = [
-        { icon: <Bold size={18} />, prefix: '**', suffix: '**', label: 'Bold' },
-        { icon: <Italic size={18} />, prefix: '_', suffix: '_', label: 'Italic' },
-        { icon: <Quote size={18} />, prefix: '> ', suffix: '', label: 'Quote' },
-        { icon: <Code size={18} />, prefix: '`', suffix: '`', label: 'Code' },
-        { icon: <List size={18} />, prefix: '- ', suffix: '', label: 'Bullet List' },
+    const textStyles = [
+        { icon: <Bold size={18} />, prefix: '**', suffix: '**', label: t('markdown_tools.bold') },
+        { icon: <Italic size={18} />, prefix: '_', suffix: '_', label: t('markdown_tools.italic') },
+        { icon: <Code size={18} />, prefix: '`', suffix: '`', label: t('markdown_tools.code') },
     ];
 
-    const utilityTools = [
-        { icon: <LinkIcon size={18} />, prefix: '[', suffix: '](url)', label: 'Link' },
-        { icon: <ImageIcon size={18} />, prefix: '![alt](', suffix: ')', label: 'Image' },
-        { icon: <Sigma size={18} />, prefix: '$$ ', suffix: ' $$', label: 'Math' },
-        { icon: <Minus size={18} />, prefix: '\n---\n', suffix: '', label: 'Divider' },
-    ];
+    const handleUploadSuccess = (url: string, caption: string) => {
+        onAction(`![${caption}](${url})`, '');
+    };
 
     return (
         <div className="flex flex-wrap items-center gap-1 p-2 border-b border-base-200 bg-base-50">
-            {primaryTools.map((tool, index) => (
+            <ImageUploadModal
+                isOpen={isUploadModalOpen}
+                onClose={() => setIsUploadModalOpen(false)}
+                onUploadSuccess={handleUploadSuccess}
+            />
+
+            {/* Group 1: Text Styles */}
+            {textStyles.map((tool, index) => (
                 <button
                     key={index}
                     type="button"
@@ -98,8 +113,20 @@ const MarkdownToolbar = ({ onAction }: MarkdownToolbarProps) => {
                 </ul>
             </div>
 
+            <div className="divider divider-horizontal mx-0 h-6 self-center opacity-50"></div>
+
+            {/* Group 2: Lists & Callouts */}
+            <button
+                type="button"
+                onClick={() => onAction('- ', '')}
+                className="btn btn-ghost btn-sm btn-square hover:bg-base-200 transition-colors"
+                title={t('markdown_tools.bullet_list')}
+            >
+                <List size={18} />
+            </button>
+
             <div className="dropdown dropdown-bottom">
-                <div tabIndex={0} role="button" className="btn btn-ghost btn-sm px-1 flex items-center gap-0 hover:bg-base-200" title="Ordered List">
+                <div tabIndex={0} role="button" className="btn btn-ghost btn-sm px-1 flex items-center gap-0 hover:bg-base-200" title={t('markdown_tools.ordered_list')}>
                     <ListOrdered size={18} />
                     <ChevronDown size={14} />
                 </div>
@@ -115,13 +142,60 @@ const MarkdownToolbar = ({ onAction }: MarkdownToolbarProps) => {
             </div>
 
             <div className="dropdown dropdown-bottom">
-                <div tabIndex={0} role="button" className="btn btn-ghost btn-sm px-1 flex items-center gap-0 hover:bg-base-200" title="Table">
+                <div tabIndex={0} role="button" className="btn btn-ghost btn-sm px-1 flex items-center gap-0 hover:bg-base-200" title={t('markdown_tools.callout.callout')}>
+                    <Info size={18} />
+                    <ChevronDown size={14} />
+                </div>
+                <ul tabIndex={0} className="dropdown-content z-[20] menu p-2 shadow-xl bg-base-100 rounded-box w-44 border border-base-200">
+                    {calloutTypes.map((callout) => (
+                        <li key={callout.type}>
+                            <button
+                                type="button"
+                                className="flex items-center gap-2"
+                                onClick={() => {
+                                    onAction(`\n/// admonition | Title\n    type: ${callout.type}\n\nContent here\n`, '\n///\n');
+                                    if (document.activeElement instanceof HTMLElement) (document.activeElement as HTMLElement).blur();
+                                }}
+                            >
+                                <div className="w-2 h-2 rounded-full" style={{ backgroundColor: callout.color }} />
+                                {callout.label}
+                            </button>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
+            <button
+                type="button"
+                onClick={() => onAction('> ', '')}
+                className="btn btn-ghost btn-sm btn-square hover:bg-base-200 transition-colors"
+                title={t('markdown_tools.quote')}
+            >
+                <Quote size={18} />
+            </button>
+
+            <div className="divider divider-horizontal mx-0 h-6 self-center opacity-50"></div>
+
+            {/* Group 3: Multimedia & Tables */}
+            <button type="button" onClick={() => onAction('[', '](url)')} className="btn btn-ghost btn-sm btn-square hover:bg-base-200 transition-colors" title={t('markdown_tools.link')}><LinkIcon size={18} /></button>
+
+            <button
+                type="button"
+                onClick={() => setIsUploadModalOpen(true)}
+                className="btn btn-ghost btn-sm btn-square text-accent hover:bg-base-200 transition-colors"
+                title={t('markdown_tools.image.upload_image')}
+            >
+                <ImageIcon size={18} />
+            </button>
+
+            <div className="dropdown dropdown-bottom">
+                <div tabIndex={0} role="button" className="btn btn-ghost btn-sm px-1 flex items-center gap-0 hover:bg-base-200" title={t('markdown_tools.table.table')}>
                     <Table size={18} />
                     <ChevronDown size={14} />
                 </div>
                 <div tabIndex={0} className="dropdown-content z-[20] p-5 shadow-2xl bg-base-100 rounded-2xl w-[260px] border border-base-200 mt-2">
                     <div className="mb-5">
-                        <p className="text-[10px] font-black opacity-40 mb-2 uppercase tracking-widest">Alignment</p>
+                        <p className="text-[10px] font-black opacity-40 mb-2 uppercase tracking-widest">{t('markdown_tools.table.alignment')}</p>
                         <div className="flex gap-2 p-1 bg-base-200 rounded-xl w-fit">
                             <button onClick={() => generateTable(2, 2, 'left')} className="btn btn-xs btn-ghost btn-square hover:bg-base-100"><AlignLeft size={14} /></button>
                             <button onClick={() => generateTable(2, 2, 'center')} className="btn btn-xs btn-ghost btn-square hover:bg-base-100"><AlignCenter size={14} /></button>
@@ -129,7 +203,7 @@ const MarkdownToolbar = ({ onAction }: MarkdownToolbarProps) => {
                         </div>
                     </div>
                     <div className="flex justify-between items-end mb-2">
-                        <p className="text-[10px] font-black opacity-40 uppercase tracking-widest">Quick Grid</p>
+                        <p className="text-[10px] font-black opacity-40 uppercase tracking-widest">{t('markdown_tools.table.quick_grid')}</p>
                         <span className="text-[10px] font-mono font-bold text-accent">{hoverGrid.r} x {hoverGrid.c}</span>
                     </div>
                     <div className="grid grid-cols-9 gap-1.5 p-2 bg-base-200 rounded-xl" onMouseLeave={() => setHoverGrid({ r: 0, c: 0 })}>
@@ -142,17 +216,11 @@ const MarkdownToolbar = ({ onAction }: MarkdownToolbarProps) => {
                 </div>
             </div>
 
-            {utilityTools.map((tool, index) => (
-                <button
-                    key={index}
-                    type="button"
-                    onClick={() => onAction(tool.prefix, tool.suffix)}
-                    className="btn btn-ghost btn-sm btn-square hover:bg-base-200 transition-colors"
-                    title={tool.label}
-                >
-                    {tool.icon}
-                </button>
-            ))}
+            <div className="divider divider-horizontal mx-0 h-6 self-center opacity-50"></div>
+
+            {/* Group 4: Math & Structure */}
+            <button type="button" onClick={() => onAction('$$ ', ' $$')} className="btn btn-ghost btn-sm btn-square hover:bg-base-200 transition-colors" title={t('markdown_tools.math')}><Sigma size={18} /></button>
+            <button type="button" onClick={() => onAction('\n---\n', '')} className="btn btn-ghost btn-sm btn-square hover:bg-base-200 transition-colors" title={t('markdown_tools.divider')}><Minus size={18} /></button>
         </div>
     );
 };

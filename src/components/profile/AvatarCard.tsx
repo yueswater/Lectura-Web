@@ -40,7 +40,7 @@ const AvatarCard = ({ user, onUpdate }: Props) => {
                 <div className="relative mb-6">
                     <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-white shadow-xl bg-base-200 flex items-center justify-center">
                         {uploading ? (
-                            <Loader2 className="animate-spin text-primary" size={32} />
+                            <Loader2 className="animate-spin text-accent" size={32} />
                         ) : user?.avatar ? (
                             <img src={user.avatar} className="w-full h-full object-cover" alt="avatar" />
                         ) : (

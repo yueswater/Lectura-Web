@@ -54,7 +54,7 @@ const ProjectDetails = () => {
     if (loading) {
         return (
             <div className="flex h-[50vh] items-center justify-center">
-                <Loader2 className="animate-spin text-primary" size={40} />
+                <Loader2 className="animate-spin text-info" size={40} />
             </div>
         );
     }

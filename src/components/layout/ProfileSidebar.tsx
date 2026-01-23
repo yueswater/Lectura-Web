@@ -38,17 +38,18 @@ const ProfileSidebar = ({ isOpen, onClose }: ProfileSidebarProps) => {
 
     return (
         <div
-            className={`fixed top-0 right-0 h-full w-80 z-[100] transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${isOpen ? 'translate-x-0' : 'translate-x-full'
-                }`}
+            className={`fixed z-[100] transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] 
+                ${isOpen ? 'translate-x-0 translate-y-0' : 'translate-x-full md:translate-y-0 -translate-y-full md:translate-x-full'}
+                top-0 right-0 h-full w-full md:w-80`}
         >
-            <div className="absolute inset-0 bg-base-100/60 backdrop-blur-none bg-transparent border-l border-none" />
+            <div className="absolute inset-0 bg-base-100/40 backdrop-blur-md md:backdrop-blur-sm" />
 
-            <div className="relative h-full flex flex-col p-6">
+            <div className="relative h-full flex flex-col p-6 overflow-y-auto">
                 <div className="flex justify-between items-center mb-10">
                     <h2 className="text-xl font-bold text-base-content">{t('profile_sidebar.profile')}</h2>
                     <button
                         onClick={onClose}
-                        className="btn btn-ghost btn-sm btn-circle hover:bg-base-content/10"
+                        className="btn btn-ghost btn-sm btn-circle hover:bg-base-content/10 border-none"
                     >
                         <X size={20} />
                     </button>
@@ -56,7 +57,7 @@ const ProfileSidebar = ({ isOpen, onClose }: ProfileSidebarProps) => {
 
                 <div className="flex flex-col items-center mb-10">
                     <div className="avatar placeholder mb-4">
-                        <div className="bg-neutral text-neutral-content rounded-full w-24 shadow-xl ring-4 ring-base-100 overflow-hidden">
+                        <div className="bg-neutral text-neutral-content rounded-full w-24 shadow-xl ring-0 overflow-hidden">
                             {user?.avatar ? (
                                 <img
                                     src={user.avatar}
@@ -82,7 +83,7 @@ const ProfileSidebar = ({ isOpen, onClose }: ProfileSidebarProps) => {
                             <Link
                                 to="/profile"
                                 onClick={onClose}
-                                className="flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-base-content/5 transition-colors text-base-content/80 hover:text-base-content font-medium"
+                                className="flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-base-content/5 transition-colors text-base-content/80 hover:text-base-content font-medium border-none"
                             >
                                 <User size={20} />
                                 {t('profile_sidebar.profile')}
@@ -92,7 +93,7 @@ const ProfileSidebar = ({ isOpen, onClose }: ProfileSidebarProps) => {
                             <Link
                                 to="/dashboard"
                                 onClick={onClose}
-                                className="flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-base-content/5 transition-colors text-base-content/80 hover:text-base-content font-medium"
+                                className="flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-base-content/5 transition-colors text-base-content/80 hover:text-base-content font-medium border-none"
                             >
                                 <LayoutDashboard size={20} />
                                 {t('profile_sidebar.dashboard')}
@@ -102,7 +103,7 @@ const ProfileSidebar = ({ isOpen, onClose }: ProfileSidebarProps) => {
                             <Link
                                 to="/settings"
                                 onClick={onClose}
-                                className="flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-base-content/5 transition-colors text-base-content/80 hover:text-base-content font-medium"
+                                className="flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-base-content/5 transition-colors text-base-content/80 hover:text-base-content font-medium border-none"
                             >
                                 <Settings size={20} />
                                 {t('profile_sidebar.settings')}
@@ -111,10 +112,10 @@ const ProfileSidebar = ({ isOpen, onClose }: ProfileSidebarProps) => {
                     </ul>
                 </nav>
 
-                <div className="pt-6 border-t border-base-content/5">
+                <div className="pt-6 mt-6 border-t border-base-content/5">
                     <button
                         onClick={handleLogout}
-                        className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-error/10 text-error hover:bg-error/20 transition-all font-medium"
+                        className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-error/10 text-error hover:bg-error/20 transition-all font-medium border-none"
                     >
                         <LogOut size={18} />
                         {t('profile_sidebar.sign_out')}

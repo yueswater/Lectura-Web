@@ -67,7 +67,7 @@ const Navbar = ({ onOpenSidebar }: NavbarProps) => {
                             <Menu size={20} />
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a href="#features">{t('nav.features')}</a></li>
+                            <li><a href="#features">{t('nav.feature')}</a></li>
                             <li><a href="#pricing">{t('nav.pricing')}</a></li>
                             <li><a href="#faq">{t('nav.faq')}</a></li>
                         </ul>

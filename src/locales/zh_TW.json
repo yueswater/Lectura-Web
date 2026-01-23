@@ -20,7 +20,8 @@
       "handout_downloading": "講義下載中..."
     },
     "back_to_home": "返回首頁",
-    "redirecting": "正在重新導向..."
+    "redirecting": "正在重新導向...",
+    "transitioning": "正在翻書中..."
   },
   "auth": {
     "welcome": "歡迎回來",
@@ -299,7 +300,9 @@
       "markdown_source": "Markdown 工具",
       "preview": "即時預覽",
       "placeholder": "在此撰寫您的章節內容...",
-      "apply": "套用"
+      "apply": "套用",
+      "figure": "圖",
+      "table": "表"
     }
   },
   "section_table": {
@@ -309,6 +312,46 @@
     "last_updated": "最後更新",
     "actions": "操作",
     "confirm_delete": "您確定要刪除此章節嗎？"
+  },
+  "markdown_tools": {
+    "bold": "粗體",
+    "italic": "斜體",
+    "quote": "引用",
+    "code": "程式碼",
+    "bullet_list": "無序清單",
+    "ordered_list": "有序清單",
+    "table": {
+      "table": "表格",
+      "insert_table": "插入表格",
+      "alignment": "對齊方式",
+      "quick_grid": "快速選擇表格大小"
+    },
+    "link": "超連結",
+    "image": {
+      "upload_image": "上傳圖片"
+    },
+    "callout": {
+      "callout": "標註框",
+      "title": "標題",
+      "type": "類型",
+      "info": "資訊",
+      "warning": "警告",
+      "danger": "危險",
+      "success": "成功",
+      "tip": "提示"
+    },
+    "color": {
+      "red": "紅色",
+      "orange": "橙色",
+      "yellow": "黃色",
+      "green": "綠色",
+      "blue": "藍色",
+      "purple": "紫色",
+      "pink": "粉紅色",
+      "gray": "灰色"
+    },
+    "math": "數學公式",
+    "divider": "分隔線"
   },
   "calendar": {
     "title": "日曆",

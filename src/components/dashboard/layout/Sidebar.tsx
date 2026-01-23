@@ -67,7 +67,7 @@ const Sidebar = ({ isCollapsed, toggleSidebar }: SidebarProps) => {
 
                 <button
                     onClick={toggleSidebar}
-                    className={`btn btn-circle btn-xs btn-ghost text-neutral-content/50 hover:text-white hover:bg-white/10 z-50 
+                    className={`hidden lg:flex btn btn-circle btn-xs btn-ghost text-neutral-content/50 hover:text-white hover:bg-white/10 z-50 
                         ${isCollapsed ? 'absolute -right-6 top-2 bg-neutral shadow-md border border-white/5' : ''}`}
                 >
                     {isCollapsed ? <ChevronRight size={14} /> : <ChevronLeft size={18} />}
@@ -81,11 +81,11 @@ const Sidebar = ({ isCollapsed, toggleSidebar }: SidebarProps) => {
                         <div key={item.path} className="relative group">
                             {active && (
                                 <div className="absolute inset-y-0 -right-3 w-[calc(100%+12px)] z-0 pointer-events-none text-base-200">
-                                    <div className="absolute right-0 -top-10 w-10 h-10">
+                                    <div className="hidden lg:block absolute right-0 -top-10 w-10 h-10">
                                         <Curve className="w-full h-full fill-current" />
                                     </div>
-                                    <div className="w-full h-full bg-base-200 rounded-l-[2.5rem]"></div>
-                                    <div className="absolute right-0 -bottom-10 w-10 h-10">
+                                    <div className="w-full h-full bg-base-200 lg:rounded-l-[2.5rem]"></div>
+                                    <div className="hidden lg:block absolute right-0 -bottom-10 w-10 h-10">
                                         <Curve className="w-full h-full fill-current scale-y-[-1]" />
                                     </div>
                                 </div>
@@ -95,7 +95,7 @@ const Sidebar = ({ isCollapsed, toggleSidebar }: SidebarProps) => {
                                 to={item.path}
                                 className={`relative z-10 flex items-center py-4 font-medium transition-all duration-300
                                     ${active
-                                        ? 'text-base-content translate-x-1'
+                                        ? 'text-base-content translate-x-1 lg:rounded-none rounded-2xl'
                                         : 'text-neutral-content/60 hover:text-white hover:bg-white/5 rounded-2xl'
                                     }
                                     ${isCollapsed ? 'justify-center px-0' : 'pl-6 pr-4 gap-4'}

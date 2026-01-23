@@ -32,6 +32,20 @@ const reorderSections = async (handoutId: string, structure: SectionStructureIte
     await api.post(`content/handouts/handouts/${handoutId}/reorder-sections/`, { structure });
 };
 
+const uploadAttachment = async (file: File, caption: string, altText: string): Promise<any> => {
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('caption', caption);
+    formData.append('alt_text', altText);
+
+    const response = await api.post('content/handouts/attachments/', formData, {
+        headers: {
+            'Content-Type': 'multipart/form-data',
+        },
+    });
+    return response.data;
+};
+
 const exportPdf = async (handoutId: string): Promise<Blob> => {
     const response = await api.get(`content/handouts/handouts/${handoutId}/export-pdf/`, {
         responseType: 'blob',
@@ -45,6 +59,7 @@ const handoutService = {
     createHandout,
     updateHandout,
     reorderSections,
+    uploadAttachment,
     exportPdf,
 };
 

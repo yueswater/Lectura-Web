@@ -77,7 +77,7 @@ const Projects = () => {
 
             {loading ? (
                 <div className="flex justify-center items-center h-64">
-                    <Loader2 className="w-10 h-10 animate-spin text-primary" />
+                    <Loader2 className="w-10 h-10 animate-spin text-info" />
                 </div>
             ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

@@ -117,7 +117,7 @@ const Dashboard = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <TagCloud tags={tags} handouts={handouts} />
-                        <StorageWidget user={user} />
+                        <StorageWidget user={user} files={handouts} />
                     </div>
                 </div>
 

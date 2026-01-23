@@ -13,14 +13,15 @@
     "recent": "最近",
     "recent_created": "最近创建",
     "created": "创建于",
-    "no_files": "目前没有可用的文件",
+    "no_files": "当前没有可用文件",
     "download": {
       "download": "下载",
       "project_downloading": "正在打包项目...",
       "handout_downloading": "正在下载讲义..."
     },
     "back_to_home": "返回首页",
-    "redirecting": "正在重定向..."
+    "redirecting": "正在重定向...",
+    "transitioning": "正在翻页..."
   },
   "auth": {
     "welcome": "欢迎回来",
@@ -28,8 +29,8 @@
     "username": "用户名",
     "password": "密码",
     "placeholders": {
-      "username": "输入用户名",
-      "password": "输入密码"
+      "username": "请输入用户名",
+      "password": "请输入密码"
     },
     "remember_me": "记住我",
     "sign_in": "登录",
@@ -41,18 +42,18 @@
     "first_name": "名字",
     "last_name": "姓氏",
     "email": "电子邮件",
-    "already_have_account": "已经有账号了？",
-    "check_email": "检查您的电子邮件",
+    "already_have_account": "已有账号？",
+    "check_email": "请查收电子邮件",
     "verification_sent_to": "验证邮件已发送至",
-    "verify_success": "您的电子邮件已成功验证。",
+    "verify_success": "您的邮箱已成功验证。",
     "verify_success_msg": "您可以关闭此页面并返回登录。",
     "back_to_login": "返回登录页面",
     "reset": {
       "forgot_password": "忘记密码",
-      "forgot_desc": "请输入您的电子邮件地址，我们将向您发送重置验证码与链接。",
+      "forgot_desc": "请输入您的电子邮件地址，我们将发送重置验证码及链接给您。",
       "send_request": "发送重置请求",
       "request_sent_title": "邮件已寄出",
-      "request_sent_content": "请前往您的电子邮箱查看验证码与重置链接。",
+      "request_sent_content": "请前往邮箱查看验证码及重置链接。",
       "set_new_password": "设置新密码",
       "confirm_button": "确认修改密码",
       "success_title": "密码修改成功",
@@ -69,7 +70,7 @@
       "fail_msg": "验证链接无效或已过期。请重新尝试。",
       "resend_link": "重新发送验证邮件",
       "try_again": "重新尝试验证",
-      "already_verified_title": "您的电子邮件已验证，请返回登录。",
+      "already_verified_title": "您的邮箱已验证，请返回登录。",
       "already_verified_msg": "返回登录页面"
     }
   },
@@ -86,7 +87,7 @@
   "storage": {
     "tier": {
       "beta": "测试版",
-      "free": "免费",
+      "free": "免费版",
       "pro": "专业版",
       "enterprise": "企业版"
     },
@@ -94,21 +95,21 @@
     "storage_used": "已使用存储空间",
     "storage_limit": "存储空间上限",
     "used": "已使用",
-    "limit_reached_title": "存储空间已达上限",
+    "limit_reached_title": "存储空间已满",
     "limit_reached_message": "您已达到当前账号的存储空间上限。"
   },
   "hero": {
     "title": "释放教学的",
     "subtitle": "力量",
     "description": "通过我们的自动化 SaaS 仪表板，将您的课程数据转化为可操作的见解和精美的讲义。",
-    "get_started": "立即开始"
+    "get_started": "开始使用"
   },
   "nav": {
     "dashboard": "仪表板",
     "handouts": "讲义",
     "settings": "设置",
     "sign_in": "登录",
-    "sign_out": "登出",
+    "sign_out": "退出登录",
     "get_started": "注册",
     "feature": "功能",
     "pricing": "价格",
@@ -152,7 +153,7 @@
       "update": "更新密码"
     },
     "profile_info": "个人资料信息",
-    "profile_info_description": "更新您的个人资料信息。",
+    "profile_info_description": "更新您的个人资料。",
     "active": "已启用",
     "inactive": "未启用"
   },
@@ -160,7 +161,7 @@
     "profile": "个人资料",
     "dashboard": "仪表板",
     "settings": "设置",
-    "sign_out": "登出"
+    "sign_out": "退出"
   },
   "dashboard": {
     "title": "仪表板",
@@ -168,7 +169,7 @@
     "recent_handouts": "最近讲义",
     "recent_files": "最近文件",
     "stats": {
-      "title": "统计资料",
+      "title": "统计数据",
       "total_handouts": "总讲义数",
       "total_projects": "总项目数",
       "total_sections": "总章节数",
@@ -180,11 +181,11 @@
     "projects": "项目",
     "handouts": "讲义",
     "settings": "设置",
-    "logout": "登出"
+    "logout": "退出登录"
   },
   "projects": {
     "title": "项目",
-    "subtitle": "管理并追踪项目",
+    "subtitle": "管理并跟踪项目",
     "create_new": "创建新项目",
     "create": "创建项目",
     "cancel": "取消创建",
@@ -194,7 +195,7 @@
     "project_name": "项目名称",
     "project_name_example": "例如：2024 年度报告",
     "description": "描述 (选填)",
-    "description_placeholder": "偷偷告诉我你的项目在做啥吧！",
+    "description_placeholder": "简单描述一下你的项目吧！",
     "tags": "标签",
     "add_tag": "添加标签"
   },
@@ -202,9 +203,9 @@
     "title": "讲义",
     "subtitle": "管理您的讲义资料",
     "create_new": "创建新讲义",
-    "no_handouts": "尚无讲义，快来新建讲义吧！",
+    "no_handouts": "尚无讲义，快来创建讲义吧！",
     "no_description": "无描述",
-    "empty": "讲义空空如也",
+    "empty": "讲义列表空空如也",
     "no_section": "尚无章节，快来添加章节吧。",
     "search_placeholder": "搜索讲义...",
     "table_of_contents": "目录",
@@ -213,11 +214,11 @@
     "select_project": "选择项目",
     "handout_title": "讲义标题",
     "handout_description": "讲义描述 (选填)",
-    "handout_description_placeholder": "说说你的讲义内容吧...",
+    "handout_description_placeholder": "简单介绍一下你的讲义内容...",
     "create_handout": "创建讲义",
     "cancel_create": "取消创建",
     "save_changes": "保存更改",
-    "order_saved": "已保存",
+    "order_saved": "已保存排序",
     "export_pdf": "导出 PDF",
     "edit_config": "讲义配置",
     "section": "个章节",
@@ -287,10 +288,10 @@
     "title": "添加章节",
     "add_new_section": "添加章节",
     "section_title": "章节标题",
-    "parent_section": "上层章节 (选填)",
-    "empty": "留空则为顶层章节",
+    "parent_section": "父级章节 (选填)",
+    "empty": "留空则为顶级章节",
     "example": "例如：第一章 示例章节",
-    "no_parent": "无上层章节",
+    "no_parent": "无父级章节",
     "cancel": "取消",
     "edit": {
       "editing": "编辑中",
@@ -298,8 +299,10 @@
       "saved": "已保存",
       "markdown_source": "Markdown 工具",
       "preview": "实时预览",
-      "placeholder": "在此撰写您的章节内容...",
-      "apply": "应用"
+      "placeholder": "在此输入您的章节内容...",
+      "apply": "应用",
+      "figure": "图",
+      "table": "表"
     }
   },
   "section_table": {
@@ -310,11 +313,51 @@
     "actions": "操作",
     "confirm_delete": "您确定要删除此章节吗？"
   },
+  "markdown_tools": {
+    "bold": "加粗",
+    "italic": "斜体",
+    "quote": "引用",
+    "code": "代码",
+    "bullet_list": "无序列表",
+    "ordered_list": "有序列表",
+    "table": {
+      "table": "表格",
+      "insert_table": "插入表格",
+      "alignment": "对齐方式",
+      "quick_grid": "快速选择大小"
+    },
+    "link": "超链接",
+    "image": {
+      "upload_image": "上传图片"
+    },
+    "callout": {
+      "callout": "提示框",
+      "title": "标题",
+      "type": "类型",
+      "info": "信息",
+      "warning": "警告",
+      "danger": "危险",
+      "success": "成功",
+      "tip": "提示"
+    },
+    "color": {
+      "red": "红色",
+      "orange": "橙色",
+      "yellow": "黄色",
+      "green": "绿色",
+      "blue": "蓝色",
+      "purple": "紫色",
+      "pink": "粉红色",
+      "gray": "灰色"
+    },
+    "math": "数学公式",
+    "divider": "分割线"
+  },
   "calendar": {
     "title": "日历",
     "handouts": "份讲义",
-    "less": "较少",
-    "more": "较多",
+    "less": "少",
+    "more": "多",
     "days": {
       "mon": "一",
       "tue": "二",

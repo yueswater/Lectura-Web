@@ -217,7 +217,7 @@ const HandoutDetails = () => {
     if (loading) {
         return (
             <div className="flex h-[50vh] items-center justify-center">
-                <Loader2 className="animate-spin text-secondary" size={40} />
+                <Loader2 className="animate-spin text-accent" size={40} />
             </div>
         );
     }

@@ -28,7 +28,7 @@ const Profile = () => {
     if (loading) {
         return (
             <div className="flex h-screen items-center justify-center bg-base-100">
-                <Loader2 className="animate-spin text-primary" size={48} />
+                <Loader2 className="animate-spin text-accent" size={48} />
             </div>
         );
     }
