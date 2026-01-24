@@ -78,6 +78,7 @@ export interface UserProfile {
     last_name?: string;
     email: string;
     avatar: string | null;
+    is_verified: boolean | null;
     tier: 'BETA' | 'FREE' | 'PRO' | 'ENTERPRISE';
     storage_limit: number;
     current_storage_usage: number;
