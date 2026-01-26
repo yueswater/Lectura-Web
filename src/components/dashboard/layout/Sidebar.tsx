@@ -101,7 +101,7 @@ const Sidebar = ({ isCollapsed, toggleSidebar }: SidebarProps) => {
                                     ${isCollapsed ? 'justify-center px-0' : 'pl-6 pr-4 gap-4'}
                                 `}
                             >
-                                <span className={`flex-shrink-0 ${active ? 'text-neutral scale-110' : 'group-hover:scale-110'}`}>
+                                <span className={`flex-shrink-0 ${active ? 'text-neutral-content scale-110' : 'group-hover:scale-110'}`}>
                                     {item.icon}
                                 </span>
                                 {!isCollapsed && <span className="text-lg tracking-wide">{item.name}</span>}

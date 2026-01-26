@@ -11,7 +11,7 @@ interface CreateHandoutModalProps {
 }
 
 const CreateHandoutModal = ({ isOpen, onClose, onSubmit }: CreateHandoutModalProps) => {
-    const {t} = useTranslation();
+    const { t } = useTranslation();
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [projectId, setProjectId] = useState('');

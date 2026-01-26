@@ -80,7 +80,7 @@ const ProjectDetails = () => {
                 <h2 className="text-xl font-bold">{t('handouts.title')}</h2>
                 <button
                     onClick={() => setIsModalOpen(true)}
-                    className="btn btn-neutral text-base-100 rounded-full gap-2 shadow-lg shadow-neutral/20"
+                    className="btn btn-neutral text-neutral-content rounded-full gap-2 shadow-lg shadow-neutral/20"
                 >
                     <Plus size={20} />
                     {t('handouts.create_new')}
