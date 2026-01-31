@@ -80,7 +80,7 @@ const MarkdownPreview = ({ content }: MarkdownPreviewProps) => {
             </div>
 
             <div className="flex-1 p-8 overflow-y-auto preview-container">
-                <article className="prose prose-sm md:prose-base max-w-none whitespace-pre-wrap">
+                <article className="prose prose-sm md:prose-base max-w-none">
                     {typeof content === 'string' ? parseBlocks(content).map((part, i) => (
                         typeof part === 'string' ? (
                             <ReactMarkdown
